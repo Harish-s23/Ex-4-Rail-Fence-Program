@@ -1,8 +1,8 @@
-# Ex-4 Rail-Fence-Program
+# Ex-5 Rail-Fence-Program
 
 # IMPLEMENTATION OF RAIL FENCE – ROW & COLUMN TRANSFORMATION TECHNIQUE
-### NAME: KANIYAMUDHAN V
-### REG NO: 212224040148
+### NAME: HARESH R
+### REG NO: 212224040097
 ### DATE: 11-05-2026
 # AIM:
 
@@ -30,8 +30,6 @@ void encryptRailFence(char *message, int rails) {
     int len = strlen(message);
 
     char rail[rails][len];
-
-    // Fill with newline as placeholder
     for (int i = 0; i < rails; i++)
         for (int j = 0; j < len; j++)
             rail[i][j] = '\n';
@@ -41,11 +39,7 @@ void encryptRailFence(char *message, int rails) {
 
     for (int i = 0; i < len; i++) {
         rail[row][i] = message[i];
-
-        // Move up or down
         row += direction;
-
-        // Change direction at top or bottom
         if (row == rails - 1 || row == 0)
             direction = -direction;
     }
@@ -64,7 +58,7 @@ int main() {
     int rails;
 
     printf("Enter a Secret Message: ");
-    scanf(" %[^\n]", message);   // allows spaces
+    scanf(" %[^\n]", message); 
 
     printf("Enter number of rails: ");
     scanf("%d", &rails);
@@ -74,10 +68,11 @@ int main() {
     return 0;
 }
 
+
 ```
 
 # OUTPUT
-<img width="1365" height="880" alt="image" src="https://github.com/user-attachments/assets/4cd91e23-0d4a-44b9-b6c0-02c53346e41f" />
+<img width="1919" height="1085" alt="Screenshot 2026-05-12 141305" src="https://github.com/user-attachments/assets/21f4acd0-f13c-49ed-873a-9548c7454feb" />
 
 
 # RESULT
